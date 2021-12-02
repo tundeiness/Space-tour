@@ -1,0 +1,99 @@
+
+
+@media (max-width: 480px){
+
+  .sidebar{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    right: 0;
+    top:0;
+    height: 100vh;
+    // z-index: 1000;
+    // outline: 1px solid blue;
+    color:#fff;
+    width: clamp(15rem, 5vw, 16rem);
+    // width: min(65vw, 15rem);
+    // inset: 0 0 0 10%;
+    // transition: 0.3s ease-in-out;
+    // transform: translateX(0);
+    // transition: transform 5s ease-in-out;
+    background-color: #ffffff10;
+    backdrop-filter: blur( 12px );
+    -webkit-backdrop-filter: blur( 12px );
+
+    &__btn-wrap{
+      // outline: 1px solid red;
+      // display: flex;
+      // justify-content: end;
+      
+
+      // .mobile-nav-toggle{
+      //   width: 3rem;
+      //   height: 3rem;
+      //   background-image: url(../../assets/image/shared/icon-hamburger.svg);
+      //   background-repeat: no-repeat;
+      //   background-position: center;
+      //   background-color: transparent;
+      //   cursor: pointer;
+      //   margin: 1.5rem 1.5rem 1.5rem;
+      // }
+    }
+
+    &__side-nav{
+      // outline: 1px solid green;
+       margin-top: clamp(18vh, 50%, 20vh);
+       font-size: 16px;
+      .side-active{
+        //  outline: 1px solid blue;
+         padding: 5px 0 5px 10px;
+         margin: 1.2vh 0;
+         list-style-type: none;
+         border-right: 3px solid #fff;
+         
+        a{
+          text-decoration: none;
+          color: $clr-white;
+          text-transform: uppercase;
+          span{
+            padding-right: 10px;
+            color: $clr-white;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .side-inactive{
+        //  outline: 1px solid blue;
+         padding: 5px 0 5px 10px;
+         margin: 1.2vh 0;
+         list-style-type: none;
+        a{
+          text-transform: uppercase;
+          text-decoration: none;
+          color: $clr-white;
+          
+          span{
+            padding-right: 10px;
+            color: $clr-white;
+            font-weight: 700;
+          }
+        }
+      }
+
+        .side-inactive:hover,
+        .side-inactive:focus{
+          border-right: 3px solid rgb(255, 255, 255, 0.6);
+          transition: border-right 0.3s ease-in-out;
+        }
+    }
+  }
+
+
+}
+
+@media screen and (min-width: 768px){
+  .sidebar{
+    display: none;
+  }
+}

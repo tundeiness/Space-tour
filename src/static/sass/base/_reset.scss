@@ -1,0 +1,68 @@
+
+
+html {
+  box-sizing: border-box;
+  height: -webkit-fill-available;
+}
+
+*, 
+*::before,
+*::after{
+box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  padding:0;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-weight: 400;
+}
+
+
+body{
+  line-height: 1.5;
+  min-height: 100vh;
+  // mobile viewport bug fix
+  min-height: -webkit-fill-available; 
+  font-family: $ff-sans-normal;
+  font-size: $fs-400;
+}
+
+
+img,
+picture{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+input, 
+button, 
+textarea, 
+select{
+  font: inherit
+}
+
+.App{
+   min-height: 100vh;
+   border: 1px solid green;
+}
