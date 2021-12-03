@@ -7,7 +7,6 @@ import Logo from '../../static/assets/image/shared/logo.svg';
 import useToggle from '../../utils/useToggle';
 
 const Header = () => {
-  const test = 1;
   const [isActive, setIsActive] = useState('Home');
   const [isOpen, setIsOpen] = useToggle();
 
@@ -31,7 +30,7 @@ const Header = () => {
       <button
         type="button"
         aria-controls="primary-navigation"
-        className={isOpen === false ? 'mobile-nav-toggle' : 'open-mobile'}
+        className={isOpen === false ? 'open-sidebar' : 'close-sidebar'}
         onClick={setIsOpen}
       >
         <span className="sr-mobile" aria-expanded="false" />
