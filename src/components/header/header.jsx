@@ -1,12 +1,15 @@
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../static/assets/image/shared/logo.svg';
+import useToggle from '../../utils/useToggle';
 
 const Header = () => {
   const test = 1;
   const [isActive, setIsActive] = useState('Home');
-  // const [isOpen, setIsOpen] = useToggle();
+  const [isOpen, setIsOpen] = useToggle();
 
   const handleClick = (link) => {
     setIsActive(link);
@@ -29,30 +32,43 @@ const Header = () => {
         type="button"
         aria-controls="primary-navigation"
         className={isOpen === false ? 'mobile-nav-toggle' : 'open-mobile'}
+        onClick={setIsOpen}
       >
         <span className="sr-mobile" aria-expanded="false" />
       </button>
       <nav className="nav">
         <div>
-          <li className={isActive === 'Home' ? 'active' : 'inactive'}>
+          <li
+            className={isActive === 'Home' ? 'active' : 'inactive'}
+            onClick={() => handleClick('Home')}
+          >
             <a className="ff-sans" href="home.html">
               <span>00</span>
               Home
             </a>
           </li>
-          <li className={isActive === 'Destination' ? 'active' : 'inactive'}>
+          <li
+            className={isActive === 'Destination' ? 'active' : 'inactive'}
+            onClick={() => handleClick('Destination')}
+          >
             <a className="ff-sans" href="destination.html">
               <span>01</span>
               Destination
             </a>
           </li>
-          <li className={isActive === 'Crew' ? 'active' : 'inactive'}>
+          <li
+            className={isActive === 'Crew' ? 'active' : 'inactive'}
+            onClick={() => handleClick('Crew')}
+          >
             <a className="ff-sans" href="crew.html">
               <span>02</span>
               Crew
             </a>
           </li>
-          <li className={isActive === 'Technology' ? 'active' : 'inactive'}>
+          <li
+            className={isActive === 'Technology' ? 'active' : 'inactive'}
+            onClick={() => handleClick('Technology')}
+          >
             <a className="ff-sans" href="technology.html">
               <span>03</span>
               Technology
