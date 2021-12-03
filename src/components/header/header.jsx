@@ -1,10 +1,17 @@
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../static/assets/image/shared/logo.svg';
 
 const Header = () => {
   const test = 1;
+  const [isActive, setIsActive] = useState('Home');
+  // const [isOpen, setIsOpen] = useToggle();
+
+  const handleClick = (link) => {
+    setIsActive(link);
+  };
+
   return (
     <header className="header border-red">
       {/* <div className="pry-header__img-section border-red"> */}
@@ -21,37 +28,37 @@ const Header = () => {
       <button
         type="button"
         aria-controls="primary-navigation"
-        className="border-red"
+        className={isOpen === false ? 'mobile-nav-toggle' : 'open-mobile'}
       >
         <span className="sr-mobile" aria-expanded="false" />
       </button>
       <nav className="nav">
-        {/* <ul> */}
-        <li>
-          <a className="ff-sans" href="index.html">
-            <span>00</span>
-            Home
-          </a>
-        </li>
-        <li>
-          <a className="ff-sans" href="index.html">
-            <span>01</span>
-            Destination
-          </a>
-        </li>
-        <li>
-          <a className="ff-sans" href="index.html">
-            <span>02</span>
-            Crew
-          </a>
-        </li>
-        <li>
-          <a className="ff-sans" href="index.html">
-            <span>03</span>
-            Technology
-          </a>
-        </li>
-        {/* </ul> */}
+        <div>
+          <li className={isActive === 'Home' ? 'active' : 'inactive'}>
+            <a className="ff-sans" href="home.html">
+              <span>00</span>
+              Home
+            </a>
+          </li>
+          <li className={isActive === 'Destination' ? 'active' : 'inactive'}>
+            <a className="ff-sans" href="destination.html">
+              <span>01</span>
+              Destination
+            </a>
+          </li>
+          <li className={isActive === 'Crew' ? 'active' : 'inactive'}>
+            <a className="ff-sans" href="crew.html">
+              <span>02</span>
+              Crew
+            </a>
+          </li>
+          <li className={isActive === 'Technology' ? 'active' : 'inactive'}>
+            <a className="ff-sans" href="technology.html">
+              <span>03</span>
+              Technology
+            </a>
+          </li>
+        </div>
       </nav>
     </header>
   );
