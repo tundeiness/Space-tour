@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from '../../static/assets/image/shared/logo.svg';
 import useToggle from '../../utils/useToggle';
+// import useMediaQuery from '../../utils/useMediaQuery';
+import Sidebar from '../sidebar/sidebar';
 
 const Header = () => {
   const [isActive, setIsActive] = useState('Home');
@@ -13,6 +15,9 @@ const Header = () => {
   const handleClick = (link) => {
     setIsActive(link);
   };
+
+  // const { screen } = useMediaQuery();
+  // const breakpoint = 900;
 
   return (
     <header className="header border-red">
@@ -35,6 +40,7 @@ const Header = () => {
       >
         <span className="sr-mobile" aria-expanded="false" />
       </button>
+      {/* {isOpen ? navigation : ''} */}
       <nav className="nav">
         <div>
           <li
@@ -75,6 +81,7 @@ const Header = () => {
           </li>
         </div>
       </nav>
+      {isOpen ? <Sidebar /> : ''}
     </header>
   );
 };

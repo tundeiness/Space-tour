@@ -97,10 +97,6 @@
   //     transition: background-image 0.3s ease-in-out;
       }
 
-
-      // .open-sidebar{}
-      // .close-sidebar{}
-
         .close-sidebar{
           display:block;
           width: 60px;
@@ -124,64 +120,10 @@
           outline: none;
         }
 
-
-      .nav{
-        outline: 1px solid blue;
-        height: 100vh;
-        width: 60%;
-        
-
-        div{
-          display: flex;
-          flex-direction: column;
-          align-items: start;
-          position:fixed;
-          right: 0;
-          outline: 1px solid green;
-          height: 100vh;
-          width: 50%;
-
-
-          li{
-            padding: 0;
-            width: 100%;
-            
-          }
-
-          li:nth-child(1){
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: clamp(3rem, 12vh, 5rem);
-          }
-
-          li:nth-child(2),
-          li:nth-child(3){
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: clamp(0.8rem, 10vh, 1.2rem);
-          }
-
-          li:nth-child(4){
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: clamp(0.8rem, 10vh, 1.2rem);
-          }
-
-           .active{
-            border-right: 3px solid red;
-            border-bottom: none;
-          }
-
-          .inactive:hover,
-          .inactive:focus{
-            border-right: 3px solid red;
-            border-bottom: none;
-            margin-bottom: 0;
-            transition: 0.3s border-right ease-in-out;
-          }
+        .nav{
+          display: none;
         }
-        
-      }
+
     }
 }
 

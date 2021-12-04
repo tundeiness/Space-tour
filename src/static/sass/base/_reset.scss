@@ -66,3 +66,40 @@ select{
    min-height: 100vh;
    border: 1px solid green;
 }
+
+body{
+    background-image: url(../../assets/image/home/background-home-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100%;
+    overflow: hidden;
+    // height: 100vh;
+}
+
+@media screen and (max-width: 768px){
+
+    body {
+    background-image: url(../../assets/image/home/background-home-tablet.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100%;
+    overflow: hidden;
+    // height: 100vh;
+    }
+}
+
+
+@media screen and (max-width: 480px){
+
+    body {
+    background-image: url(../../assets/image/home/background-home-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100%;
+    overflow: hidden;
+    // height: 100vh;
+    }
+}
