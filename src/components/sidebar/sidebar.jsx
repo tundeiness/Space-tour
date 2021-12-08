@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState } from 'react';
 
 const Sidebar = () => {
@@ -14,6 +12,7 @@ const Sidebar = () => {
         <li
           className={isActive === 'Home' ? 'active' : 'inactive'}
           onClick={() => handleClick('Home')}
+          aria-hidden="true"
         >
           <a className="ff-sans" href="home.html">
             <span>00</span>
@@ -23,6 +22,7 @@ const Sidebar = () => {
         <li
           className={isActive === 'Destination' ? 'active' : 'inactive'}
           onClick={() => handleClick('Destination')}
+          aria-hidden="true"
         >
           <a className="ff-sans" href="destination.html">
             <span>01</span>
@@ -32,6 +32,7 @@ const Sidebar = () => {
         <li
           className={isActive === 'Crew' ? 'active' : 'inactive'}
           onClick={() => handleClick('Crew')}
+          aria-hidden="true"
         >
           <a className="ff-sans" href="crew.html">
             <span>02</span>
@@ -41,6 +42,7 @@ const Sidebar = () => {
         <li
           className={isActive === 'Technology' ? 'active' : 'inactive'}
           onClick={() => handleClick('Technology')}
+          aria-hidden="true"
         >
           <a className="ff-sans" href="technology.html">
             <span>03</span>
