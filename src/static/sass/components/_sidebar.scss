@@ -6,19 +6,22 @@
 
 @media screen and (max-width:900px) {
     .sidebar-nav{
-        outline: 1px solid blue;
+        // outline: 1px solid blue;
         position:fixed;
         right: 0;
         height: 100vh;
         width: 60%;
+        background-color: #ffffff10;
+        backdrop-filter: blur( 12px );
+        -webkit-backdrop-filter: blur( 12px );
         
 
         &__wrapper{
           position:fixed;
           right: 0;
           top: 7rem;
-          outline: 1px solid green;
-          width: 50%;
+          // outline: 1px solid green;
+          width: 80%;
 
 
           li{
@@ -28,6 +31,10 @@
 
             a{
               text-decoration: none;
+              font-family: $ff-sans-cond;
+              text-transform: uppercase;
+              // letter-spacing: 2px;
+              color: $clr-white;
               span{
               margin-right: clamp(0.5rem, 2vw, 1.2rem)
             }
@@ -55,13 +62,13 @@
           }
 
            .active{
-            border-right: 3px solid red;
+            border-right: 3px solid #fff;
             border-bottom: none;
           }
 
           .inactive:hover,
           .inactive:focus{
-            border-right: 3px solid red;
+            border-right: 3px solid rgb(255, 255, 255, 0.5);
             border-bottom: none;
             margin-bottom: 0;
             transition: 0.3s border-right ease-in-out;
