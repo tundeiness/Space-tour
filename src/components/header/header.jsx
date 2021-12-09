@@ -1,5 +1,3 @@
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -21,7 +19,6 @@ const Header = () => {
 
   return (
     <header className="header border-red">
-      {/* <div className="pry-header__img-section border-red"> */}
       <picture className="header__logo-wrap">
         <source srcSet={Logo} media="prefers-color-scheme: dark" />
         <img
@@ -31,7 +28,7 @@ const Header = () => {
           loading="lazy"
         />
       </picture>
-      {/* </div> */}
+
       <button
         type="button"
         aria-controls="primary-navigation"
@@ -40,12 +37,13 @@ const Header = () => {
       >
         <span className="sr-mobile" aria-expanded="false" />
       </button>
-      {/* {isOpen ? navigation : ''} */}
+
       <nav className="nav">
         <div>
           <li
             className={isActive === 'Home' ? 'active' : 'inactive'}
             onClick={() => handleClick('Home')}
+            aria-hidden="true"
           >
             <a className="ff-sans" href="home.html">
               <span>00</span>
@@ -55,6 +53,7 @@ const Header = () => {
           <li
             className={isActive === 'Destination' ? 'active' : 'inactive'}
             onClick={() => handleClick('Destination')}
+            aria-hidden="true"
           >
             <a className="ff-sans" href="destination.html">
               <span>01</span>
@@ -64,6 +63,7 @@ const Header = () => {
           <li
             className={isActive === 'Crew' ? 'active' : 'inactive'}
             onClick={() => handleClick('Crew')}
+            aria-hidden="true"
           >
             <a className="ff-sans" href="crew.html">
               <span>02</span>
@@ -73,6 +73,7 @@ const Header = () => {
           <li
             className={isActive === 'Technology' ? 'active' : 'inactive'}
             onClick={() => handleClick('Technology')}
+            aria-hidden="true"
           >
             <a className="ff-sans" href="technology.html">
               <span>03</span>
